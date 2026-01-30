@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyShoes | Accueil - L'excellence Sneaker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Outfit:wght@300;400;600;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root { --primary: #084140; --bg: #000000; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: var(--bg); color: #fff; font-family: 'Outfit', sans-serif; overflow-x: hidden; }
+        
+        /* NAVBAR ORIGINALE */
+        nav { position: fixed; width: 100%; top: 0; z-index: 1000; background: rgba(0,0,0,0.9); padding: 25px 6%; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Syncopate'; font-size: 26px; font-weight: 700; color: #fff; text-decoration: none; letter-spacing: -1px; }
+        .logo span { color: var(--primary); }
+        .nav-links a { color: #fff; text-decoration: none; margin-left: 40px; font-weight: 600; text-transform: uppercase; font-size: 13px; letter-spacing: 2px; transition: 0.3s; }
+        .nav-links a:hover { color: var(--primary); }
+
+        /* HERO SECTION AVEC TA NOUVELLE PHOTO */
+        .hero { 
+            height: 100vh; 
+            display: flex; 
+            align-items: center; 
+            padding: 0 10%; 
+            background: linear-gradient(to right, rgba(0,0,0,0.8), transparent), 
+                        url('img/4lebron17.jpg'); 
+            background-size: cover; 
+            background-position: center;
+        }
+
+        .hero-content { max-width: 800px; }
+        .hero-content h1 { font-family: 'Syncopate'; font-size: 5rem; font-weight: 700; line-height: 0.9; margin-bottom: 30px; }
+        .hero-content p { font-size: 1.2rem; margin-bottom: 40px; opacity: 0.8; font-weight: 300; max-width: 500px; line-height: 1.6; }
+        
+        .cta-main { 
+            display: inline-block; 
+            padding: 22px 50px; 
+            background: var(--primary); 
+            color: #fff; 
+            text-decoration: none; 
+            font-weight: 900; 
+            text-transform: uppercase; 
+            letter-spacing: 3px; 
+            font-size: 14px;
+            transition: 0.4s;
+        }
+        .cta-main:hover { background: #fff; color: #000; transform: translateY(-5px); }
+
+        /* SECTION À PROPOS */
+        .about { padding: 150px 10%; background: #080808; }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: center; }
+        .about-text h2 { font-family: 'Syncopate'; font-size: 2.5rem; margin-bottom: 30px; }
+        .about-text p { font-size: 1.1rem; line-height: 1.8; opacity: 0.7; margin-bottom: 30px; }
+        
+        .features-list { list-style: none; }
+        .features-list li { margin-bottom: 20px; font-weight: 600; font-size: 1.1rem; display: flex; align-items: center; }
+        .features-list li i { color: var(--primary); margin-right: 15px; font-size: 1.5rem; }
+
+        footer { padding: 100px 10% 50px; text-align: center; border-top: 1px solid #1a1a1a; }
+        .footer-logo { font-family: 'Syncopate'; font-size: 30px; margin-bottom: 40px; }
+        .social-icons a { color: #fff; font-size: 20px; margin: 0 20px; transition: 0.3s; }
+        .social-icons a:hover { color: var(--primary); }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">MY<span>SHOES</span></a>
+        <div class="nav-links">
+            <a href="index.html" style="color:var(--primary)">Accueil</a>
+            <a href="boutique.html">Boutique</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>STEP INTO<br><span style="color:var(--primary)">THE FUTURE</span></h1>
+            <p>Découvrez la sélection de sneakers la plus exclusive de Maurice. Authenticité garantie, style inégalé.LE STYLE COMMENCE PAR VOS PIEDS !</p>
+            <a href="boutique.html" class="cta-main">Explorer la boutique</a>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2>NOTRE <span style="color:var(--primary)">CONCEPT</span></h2>
+                    <p>Bienvenue chez MyShoes, la destination ultime pour les passionnés de sneakers à l'île Maurice. Nous ne vendons pas que des chaussures, nous proposons des pièces d'exception.</p>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check-circle"></i> 100% Authentique</li>
+                        <li><i class="fas fa-bolt"></i> Livraison Rapide (Mauritius)</li>
+                        <li><i class="fas fa-gem"></i> Modèles Exclusifs</li>
+                    </ul>
+                </div>
+                <div class="about-card" style="background: #111; padding: 50px; border-left: 5px solid var(--primary);">
+                    <div class="content-box">
+                        <h4 style="font-family: 'Syncopate'; margin-bottom: 20px;">L'ENGAGEMENT TONNY BAM</h4>
+                        <p style="opacity:0.6; font-size: 0.9rem;">Chaque paire est sélectionnée avec rigueur pour garantir une qualité irréprochable et un style qui vous démarque.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-logo">MY<span style="color:var(--primary)">SHOES</span> CONCEPT</div>
+        <div class="social-icons mb-4">
+            <a href="https://www.facebook.com/search/top?q=Tonny%20Bam"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/nyy_aikooo"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/23054759856"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <p style="opacity:0.4; font-size:12px; letter-spacing:1px;">© 2026 TONNY BAM CONCEPT • MAURITIUS • SNEAKERHEADS ONLY</p>
+    </footer>
+
+</body>
+</html>

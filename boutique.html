@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyShoes | Boutique Exclusive</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Outfit:wght@300;400;600;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root { --primary: #000000; --bg: hwb(184 35% 16%); --card: lab(24.34% -10.75 -9.68); --border: #000000; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: var(--bg); color: #fff; font-family: 'Outfit', sans-serif; }
+        
+        nav { position: fixed; width: 100%; top: 0; z-index: 1000; background: rgba(0, 0, 0, 0.95); padding: 20px 6%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); }
+        .logo { font-family: 'Syncopate'; font-size: 24px; font-weight: 700; color: #fff; text-decoration: none; }
+        .logo span { color: var(--primary); }
+        .nav-links a { color: #fff; text-decoration: none; margin-left: 30px; font-weight: 600; text-transform: uppercase; font-size: 12px; letter-spacing: 2px; }
+
+        .container-shop { padding: 150px 6% 100px; }
+        .shop-title { text-align: center; font-family: 'Syncopate'; font-size: 3.5rem; margin-bottom: 60px; }
+        .shop-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+
+        .card { background: var(--card); border: 1px solid var(--border); padding: 30px; transition: 0.4s ease; border-radius: 0; }
+        .card:hover { border-color: var(--primary); transform: translateY(-10px); }
+        .badge { color: var(--primary); font-weight: 900; font-size: 11px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px; }
+        .img-box { height: 280px; background: #080808; display: flex; align-items: center; justify-content: center; margin-bottom: 25px; overflow: hidden; }
+        .img-box img { max-width: 90%; transition: 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); }
+        .card:hover img { transform: scale(1.15) rotate(-8deg); }
+        
+        h3 { font-family: 'Syncopate'; font-size: 1.1rem; margin-bottom: 10px; height: 50px; }
+        .price { font-size: 2rem; font-weight: 900; color: var(--primary); display: block; margin-bottom: 25px; }
+        
+        .selectors { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 25px; }
+        .selectors label { font-size: 10px; text-transform: uppercase; color: #555; display: block; margin-bottom: 8px; font-weight: 700; }
+        select { width: 100%; background: #000; color: #fff; border: 1px solid #222; padding: 12px; font-size: 12px; outline: none; }
+        
+        .btn-order { width: 100%; padding: 20px; background: #fff; color: #000; border: none; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; cursor: pointer; transition: 0.3s; }
+        .btn-order:hover { background: var(--primary); color: #fff; }
+
+        footer { text-align: center; padding: 60px; border-top: 1px solid var(--border); margin-top: 50px; opacity: 0.5; font-size: 12px; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">MY<span>SHOES</span></a>
+        <div class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="boutique.html" style="color:var(--primary)">Boutique</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <div class="container-shop">
+        <h1 class="shop-title">THE <span style="color:var(--primary)">CATALOGUE</span></h1>
+        
+        <div class="shop-grid">
+
+            <div class="card">
+                <div class="badge">Nike Air Jordan</div>
+                <div class="img-box"><img src="img/1RB-JRD1.jpg" alt="J1"></div>
+                <h3>Nike Jord 1 "Red/Black"</h3>
+                <span class="price">Rs 9,400</span>
+                <div class="selectors">
+                    <div><label>Couleur</label><select><option>Grey</option><option>Hyper Blue</option></select></div>
+                    <div><label>Pointure</label><select><option>40</option><option>41</option><option>42</option></select></div>
+                </div>
+                <button class="btn-order" onclick="window.open('https://wa.me/23054759856')">COMMANDER</button>
+            </div>
+
+            <div class="card">
+                <div class="badge">Nike Air Jordan</div>
+                <div class="img-box"><img src="img/2Jordan4.webp" alt="J4"></div>
+                <h3>Jord 4 Retro Fear</h3>
+                <span class="price">Rs 7,800</span>
+                <div class="selectors">
+                    <div><label>Couleur</label><select><option>Classic RB</option><option>White/Black</option></select></div>
+                    <div><label>Pointure</label><select><option>40</option><option>41</option><option>42</option></select></div>
+                </div>
+                <button class="btn-order" onclick="window.open('https://wa.me/23054759856')">COMMANDER</button>
+            </div>
+
+            <div class="card">
+                <div class="badge">Puma Basketball</div>
+                <div class="img-box"><img src="img/3lml.webp" alt="Puma"></div>
+                <h3>Puma Lamelo Ball</h3>
+                <span class="price">Rs 14,000</span>
+                <div class="selectors">
+                    <div><label>Couleur</label><select><option>Purple Glow</option><option>Galaxy</option></select></div>
+                    <div><label>Pointure</label><select><option>42</option><option>43</option><option>44</option></select></div>
+                </div>
+                <button class="btn-order" onclick="window.open('https://wa.me/23054759856')">COMMANDER</button>
+            </div>
+
+            <div class="card">
+                <div class="badge">Nike Lebron</div>
+                <div class="img-box"><img src="img/4lebron17.jpg" alt="Lebron"></div>
+                <h3>Nike Lebron 17</h3>
+                <span class="price">Rs 19,400</span>
+                <div class="selectors">
+                    <div><label>Couleur</label><select><option>Space Jam</option><option>Lakers</option></select></div>
+                    <div><label>Pointure</label><select><option>43</option><option>44</option><option>45</option></select></div>
+                </div>
+                <button class="btn-order" onclick="window.open('https://wa.me/23054759856')">COMMANDER</button>
+            </div>
+
+            <div class="card">
+                <div class="badge">Nike Air Max</div>
+                <div class="img-box"><img src="img/5NIKEDN.jpg" alt="DN"></div>
+                <h3>Nike DN "Purple"</h3>
+                <span class="price">Rs 8,200</span>
+                <div class="selectors">
+                    <div><label>Couleur</label><select><option>Electric Purple</option><option>All Night Black</option></select></div>
+                    <div><label>Pointure</label><select><option>39</option><option>40</option><option>41</option></select></div>
+                </div>
+                <button class="btn-order" onclick="window.open('https://wa.me/23054759856')">COMMANDER</button>
+            </div>
+
+            <div class="card">
+                <div class="badge">Balenciaga</div>
+                <div class="img-box"><img src="img/6TRACKTB.jpg" alt="Track2"></div>
+                <h3>Track.2 Triple Blue</h3>
+                <span class="price">Rs 32,000</span>
+                <div class="selectors">
+                    <div><label>Couleur</label><select><option>Triple Blue</option><option>Full Black</option></select></div>
+                    <div><label>Pointure</label><select><option>40</option><option>41</option><option>42</option></select></div>
+                </div>
+                <button class="btn-order" onclick="window.open('https://wa.me/23054759856')">COMMANDER</button>
+            </div>
+
+            <div class="card">
+                <div class="badge">Balenciaga Luxury</div>
+                <div class="img-box"><img src="img/7BOUNCER.webp" alt="Bouncer"></div>
+                <h3>Balenciaga Bouncer</h3>
+                <span class="price">Rs 28,500</span>
+                <div class="selectors">
+                    <div><label>Couleur</label><select><option>Carbon Black</option><option>Cloud Grey</option></select></div>
+                    <div><label>Pointure</label><select><option>40</option><option>41</option><option>42</option></select></div>
+                </div>
+                <button class="btn-order" onclick="window.open('https://wa.me/23054759856')">COMMANDER</button>
+            </div>
+
+            <div class="card">
+                <div class="badge">Adidas Originals</div>
+                <div class="img-box"><img src="img/8BADBUNNY.webp" alt="Campus"></div>
+                <h3>Campus Bad Bunny</h3>
+                <span class="price">Rs 6,900</span>
+                <div class="selectors">
+                    <div><label>Couleur</label><select><option>Brown</option><option>White</option></select></div>
+                    <div><label>Pointure</label><select><option>39</option><option>40</option><option>41</option></select></div>
+                </div>
+                <button class="btn-order" onclick="window.open('https://wa.me/23054759856')">COMMANDER</button>
+            </div>
+
+            <div class="card">
+                <div class="badge">Nike Limited</div>
+                <div class="img-box"><img src="img/9LILNASX.jpg" alt="Satan"></div>
+                <h3>Lil Nas X "Satan"</h3>
+                <span class="price">Rs 23,800</span>
+                <div class="selectors">
+                    <div><label>Couleur</label><select><option>Blood Red</option></select></div>
+                    <div><label>Pointure</label><select><option>42</option><option>44</option></select></div>
+                </div>
+                <button class="btn-order" onclick="window.open('https://wa.me/23054759856')">COMMANDER</button>
+            </div>
+
+            <div class="card">
+                <div class="badge">Nike Classics</div>
+                <div class="img-box"><img src="img/10AF1.jpg" alt="AF1"></div>
+                <h3>Air Force 1</h3>
+                <span class="price">Rs 7,800</span>
+                <div class="selectors">
+                    <div><label>Couleur</label><select><option>Tiffany Blue</option><option>Black Diamond</option></select></div>
+                    <div><label>Pointure</label><select><option>39</option><option>40</option><option>41</option></select></div>
+                </div>
+                <button class="btn-order" onclick="window.open('https://wa.me/23054759856')">COMMANDER</button>
+            </div>
+
+            <div class="card">
+                <div class="badge">Puma Speed</div>
+                <div class="img-box"><img src="img/11PNITRO.webp" alt="Nitro"></div>
+                <h3>Fast-R Nitro Elite</h3>
+                <span class="price">Rs 11,500</span>
+                <div class="selectors">
+                    <div><label>Couleur</label><select><option>Volt Green</option><option>Sunset Pink</option></select></div>
+                    <div><label>Pointure</label><select><option>40</option><option>41</option><option>42</option><option>44</option></select></div>
+                </div>
+                <button class="btn-order" onclick="window.open('https://wa.me/23054759856')">COMMANDER</button>
+            </div>
+
+            <div class="card">
+                <div class="badge">Asics Sportstyle</div>
+                <div class="img-box"><img src="img/12KS14.jpg" alt="Asics"></div>
+                <h3>Gel-Kayano 14 Silver</h3>
+                <span class="price">Rs 9,200</span>
+                <div class="selectors">
+                    <div><label>Couleur</label><select><option>Silver Metallic</option><option>Triple Black</option><option>Cream</option></select></div>
+                    <div><label>Pointure</label><select><option>39</option><option>40</option><option>41</option><option>42</option></select></div>
+                </div>
+                <button class="btn-order" onclick="window.open('https://wa.me/23054759856')">COMMANDER</button>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 TONNY BAM CONCEPT • PORT LOUIS, MAURITIUS</p>
+    </footer>
+
+</body>
+</html>

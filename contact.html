@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyShoes | Contact & Outils Experts</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Outfit:wght@300;400;600;900&display=swap" rel="stylesheet">
+    
+    <style>
+        .contact-card { background: #0c0c0c; border: 1px solid #1a1a1a; border-radius: 0; padding: 40px; }
+        .calc-wrapper { background: #080808; border: 1px solid #1a1a1a; padding: 30px; }
+        .calc-display { background: #000; color: #05565a; font-family: 'Syncopate'; font-size: 1.8rem; padding: 20px; text-align: right; border: 1px solid #222; min-height: 80px; margin-bottom: 20px; }
+        .btn-calc { background: #111; border: 1px solid #222; color: #fff; padding: 20px; font-weight: bold; width: 100%; transition: 0.3s; }
+        .btn-calc:hover { background: #05596e; color: #fff; border-color: #08796f; }
+        .form-control, .form-select { background: #000 !important; border: 1px solid #222 !important; color: #fff !important; border-radius: 0; padding: 12px; }
+        .form-control:focus { border-color: #960404 !important; box-shadow: none; }
+        .error-msg { color: #be3810; font-size: 12px; margin-top: 5px; display: none; text-transform: uppercase; font-weight: bold; }
+        .table-custom { color: white; border-color: #222; }
+        .social-link { color: white; font-size: 24px; margin: 0 15px; transition: 0.3s; text-decoration: none; }
+        .social-link:hover { color: #0d7e88; }
+    </style>
+</head>
+<body class="bg-black text-white">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top border-bottom border-secondary py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold font-syncopate" href="index.html">MY<span class="text-danger">SHOES</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link mx-2 text-uppercase fw-bold small" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link mx-2 text-uppercase fw-bold small" href="boutique.html">Boutique</a></li>
+                    <li class="nav-item"><a class="nav-link mx-2 text-uppercase fw-bold small active text-danger" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <h1 class="font-syncopate display-4">SERVICE <span class="text-danger">CLIENT</span></h1>
+            <p class="opacity-50 text-uppercase ls-2">Assistance, Commandes et Outils de Calcul</p>
+        </div>
+
+        <div class="row g-5">
+            <div class="col-lg-5">
+                <div class="contact-card">
+                    <h3 class="font-syncopate h6 mb-4 text-danger">Envoyer une demande</h3>
+                    <form id="orderForm">
+                        <div class="mb-3">
+                            <label class="small text-uppercase opacity-50">Nom Complet</label>
+                            <input type="text" id="custName" class="form-control" placeholder="Ex: Tonny BAM">
+                            <div id="nameErr" class="error-msg">Ce champ est obligatoire</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="small text-uppercase opacity-50">Email</label>
+                            <input type="email" id="custEmail" class="form-control" placeholder="nom@exemple.com">
+                            <div id="emailErr" class="error-msg">Email invalide</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="small text-uppercase opacity-50">Modèle souhaité</label>
+                            <select class="form-select">
+                                <option>Nike Air Jordan 1</option>
+                                <option>Balenciaga Bouncer</option>
+                                <option>Adidas Campus</option>
+                                <option>Puma Lamelo</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="small text-uppercase opacity-50 d-block mb-2">Mode de livraison</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="deliv" id="r1" checked>
+                                <label class="form-check-label small" for="r1">Domicile</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="deliv" id="r2">
+                                <label class="form-check-label small" for="r2">Pick-up </label>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="c1">
+                                <label class="form-check-label small" for="c1">S'abonner aux alertes de nouveaux Drops</label>
+                            </div>
+                        </div>
+                        <button type="button" onclick="validateForm()" class="btn btn-danger w-100 py-3 fw-bold text-uppercase">Envoyer la commande</button>
+                    </form>
+
+                    <div class="mt-5">
+                        <h4 class="font-syncopate h6 mb-3">Nos Disponibilités</h4>
+                        <table class="table table-dark table-bordered table-custom small">
+                            <thead>
+                                <tr><th rowspan="2" class="align-middle">Service</th><th colspan="2">Horaires (MST)</th></tr>
+                                <tr><th>Semaine</th><th>Weekend</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>WhatsApp Support</td><td>08h00 - 20h00</td><td>10h00 - 15h00</td></tr>
+                                <tr><td>Showroom</td><td>10h00 - 18h00</td><td>Fermé</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-7">
+                <div class="calc-wrapper">
+                    <div class="row">
+                        <div class="col-md-6 border-end border-secondary pe-md-4">
+                            <p class="text-center font-syncopate xsmall text-danger mb-4">Calculatrice Standard</p>
+                            <div id="calcDisplay" class="calc-display">0</div>
+                            <div class="row g-2">
+                                <div class="col-3"><button class="btn-calc" onclick="input('7')">7</button></div>
+                                <div class="col-3"><button class="btn-calc" onclick="input('8')">8</button></div>
+                                <div class="col-3"><button class="btn-calc" onclick="input('9')">9</button></div>
+                                <div class="col-3"><button class="btn-calc text-danger" onclick="input('/')">/</button></div>
+                                <div class="col-3"><button class="btn-calc" onclick="input('4')">4</button></div>
+                                <div class="col-3"><button class="btn-calc" onclick="input('5')">5</button></div>
+                                <div class="col-3"><button class="btn-calc" onclick="input('6')">6</button></div>
+                                <div class="col-3"><button class="btn-calc text-danger" onclick="input('*')">x</button></div>
+                                <div class="col-9">
+                                    <div class="row g-2">
+                                        <div class="col-4"><button class="btn-calc" onclick="input('1')">1</button></div>
+                                        <div class="col-4"><button class="btn-calc" onclick="input('2')">2</button></div>
+                                        <div class="col-4"><button class="btn-calc" onclick="input('3')">3</button></div>
+                                        <div class="col-8"><button class="btn-calc" onclick="input('0')">0</button></div>
+                                        <div class="col-4"><button class="btn-calc" onclick="input('.')">.</button></div>
+                                    </div>
+                                </div>
+                                <div class="col-3"><button class="btn btn-danger w-100 h-100 fw-bold" onclick="solve()">=</button></div>
+                                <div class="col-12 mt-2"><button class="btn btn-dark w-100 btn-sm" onclick="clearCalc()">EFFACER (C)</button></div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 ps-md-4 mt-5 mt-md-0 text-center">
+                            <p class="text-center font-syncopate xsmall text-danger mb-4">Calculateur de Remise</p>
+                            <div class="mb-3 text-start">
+                                <label class="xsmall opacity-50 mb-2 d-block">PRIX DE BASE (RS)</label>
+                                <input type="number" id="initPrice" class="form-control" placeholder="Prix initial">
+                            </div>
+                            <div class="mb-4 text-start">
+                                <label class="xsmall opacity-50 mb-2 d-block">SÉLECTIONNER LA REMISE</label>
+                                <select id="discPerc" class="form-select">
+                                    <option value="10">Flash Sale (-10%)</option>
+                                    <option value="20">VIP Member (-20%)</option>
+                                    <option value="50">Black Friday (-50%)</option>
+                                </select>
+                            </div>
+                            <button onclick="applyDisc()" class="btn btn-danger w-100 py-3 fw-bold mb-4">CALCULER LE PRIX FINAL</button>
+                            <div class="p-3 border border-secondary bg-black mb-4">
+                                <p class="xsmall mb-1 opacity-50">VOUS PAYEZ UNIQUEMENT</p>
+                                <h2 id="finalPrice" class="text-danger fw-black font-syncopate mb-0" style="font-size: 1.4rem;">RS 0</h2>
+                            </div>
+                            <p class="font-syncopate xsmall text-danger mb-2 mt-4">Transcription Devises</p>
+                            <div class="p-3 border border-secondary bg-black">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <span class="xsmall opacity-50">EURO (€)</span>
+                                    <span id="priceEuro" class="fw-bold text-white">0.00 €</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <span class="xsmall opacity-50">DOLLAR ($)</span>
+                                    <span id="priceDollar" class="fw-bold text-white">0.00 $</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4 p-4 border border-secondary text-center">
+                    <h5 class="font-syncopate h6">BESOIN D'AIDE IMMÉDIATE ?</h5>
+                    <p class="small opacity-50">Nos conseillers sont disponibles sur WhatsApp pour confirmer vos tailles.</p>
+                    <a href="https://wa.me/23054759856" class="btn btn-outline-light px-4 py-2 mt-2 fw-bold">CHATTER SUR WHATSAPP</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-5 text-center border-top border-secondary mt-5">
+        <div class="mb-4">
+            <a href="https://www.facebook.com/search/top?q=Tonny%20Bam" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/nyy_aikooo" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/23054759856" class="social-link"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <p class="xsmall opacity-50">© 2026 TONNY BAM CONCEPT • MAURITIUS • SNEAKER CULTURE</p>
+    </footer>
+
+    <script>
+        let screen = document.getElementById('calcDisplay');
+        function input(v) { if(screen.innerText === '0') screen.innerText = ''; screen.innerText += v; }
+        function clearCalc() { screen.innerText = '0'; }
+        function solve() { try { screen.innerText = eval(screen.innerText); } catch { screen.innerText = 'ERREUR'; } }
+
+        function applyDisc() {
+            let p = document.getElementById('initPrice').value;
+            let d = document.getElementById('discPerc').value;
+            if(p > 0) {
+                let res = p - (p * d / 100);
+                document.getElementById('finalPrice').innerText = "RS " + res.toLocaleString();
+                
+                // --- LOGIQUE TRANSCRIPTION INVISIBLE (+5% sur le taux final) ---
+                let coursEuroBase = 49; 
+                let coursDollarBase = 45; 
+                
+                // On divise par un taux plus bas pour que le prix affiché en Euro soit plus élevé
+                let resEuro = (res / (coursEuroBase * 0.95)); 
+                let resDollar = (res / (coursDollarBase * 0.95));
+                
+                document.getElementById('priceEuro').innerText = resEuro.toFixed(2) + " €";
+                document.getElementById('priceDollar').innerText = resDollar.toFixed(2) + " $";
+            } else { alert("Veuillez entrer un prix valide"); }
+        }
+
+        function validateForm() {
+            let name = document.getElementById('custName').value;
+            let email = document.getElementById('custEmail').value;
+            let nameE = document.getElementById('nameErr');
+            let emailE = document.getElementById('emailErr');
+            let isValid = true;
+            if(name.length < 3) { nameE.style.display = 'block'; isValid = false; } else { nameE.style.display = 'none'; }
+            if(!email.includes('@') || email.length < 5) { emailE.style.display = 'block'; isValid = false; } else { emailE.style.display = 'none'; }
+            if(isValid) { alert("MERCI " + name.toUpperCase() + " ! Votre demande a été transmise."); }
+        }
+    </script>
+</body>
+</html>
