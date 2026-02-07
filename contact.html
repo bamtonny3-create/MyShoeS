@@ -107,39 +107,50 @@
             </div>
 
             <div class="col-lg-7">
-                <div class="calc-wrapper">
-                    <div class="row">
-                        <div class="col-md-6 border-end border-secondary pe-md-4">
-                            <p class="text-center font-syncopate xsmall text-danger mb-4">Calculatrice Standard</p>
-                            <div id="calcDisplay" class="calc-display">0</div>
-                            <div class="row g-2">
-                                <div class="col-3"><button class="btn-calc" onclick="input('7')">7</button></div>
-                                <div class="col-3"><button class="btn-calc" onclick="input('8')">8</button></div>
-                                <div class="col-3"><button class="btn-calc" onclick="input('9')">9</button></div>
-                                 <div class="col-3"><button class="btn-calc text-danger" onclick="input('/')">/</button></div>
-                                <div class="col-3"><button class="btn-calc" onclick="input('4')">4</button></div>
-                                <div class="col-3"><button class="btn-calc" onclick="input('5')">5</button></div>
-                                <div class="col-3"><button class="btn-calc" onclick="input('6')">6</button></div>
-                                <div class="col-3"><button class="btn-calc text-danger" onclick="input('*')">x</button></div>
- 
-                                <div class="col-9">
-                                    <div class="row g-2">
-                                        <div class="col-4"><button class="btn-calc" onclick="input('1')">1</button></div>
-                                        <div class="col-4"><button class="btn-calc" onclick="input('2')">2</button></div>
-                                        <div class="col-4"><button class="btn-calc" onclick="input('3')">3</button></div>
-                                        <div class="col-4"><button class="btn-calc text-danger" onclick="input('-')">-</button></div>
-                                        <div class="col-4"><button class="btn-calc" onclick="input('.')">.</button></div>
-                                        <div class="col-4"><button class="btn-calc" onclick="input('0')">0</button></div>
-                                        <div class="col-4"><button class="btn btn-danger w-100 fw-bold" onclick="solve()">=</button></div>
-                                <div class="col-3"><button class="btn-calc text-danger" onclick="input('+')">+</button></div>
-                                        
-                                        
-                                        
-                                    </div>
-                                </div>
-                                <div class="col-12 mt-2"><button class="btn btn-dark w-100 btn-sm" onclick="clearCalc()">EFFACER (C)</button></div>
-                            </div>
-                        </div>
+    <div class="calc-wrapper">
+        <p class="text-center font-syncopate xsmall text-danger mb-4">
+            Calculatrice Standard
+        </p>
+
+        <div id="calcDisplay" class="calc-display mb-3">0</div>
+
+        <div class="row g-2">
+            <!-- Row 1 -->
+            <div class="col-3"><button class="btn-calc" onclick="input('7')">7</button></div>
+            <div class="col-3"><button class="btn-calc" onclick="input('8')">8</button></div>
+            <div class="col-3"><button class="btn-calc" onclick="input('9')">9</button></div>
+            <div class="col-3"><button class="btn-calc text-danger" onclick="input('/')">÷</button></div>
+
+            <!-- Row 2 -->
+            <div class="col-3"><button class="btn-calc" onclick="input('4')">4</button></div>
+            <div class="col-3"><button class="btn-calc" onclick="input('5')">5</button></div>
+            <div class="col-3"><button class="btn-calc" onclick="input('6')">6</button></div>
+            <div class="col-3"><button class="btn-calc text-danger" onclick="input('*')">×</button></div>
+
+            <!-- Row 3 -->
+            <div class="col-3"><button class="btn-calc" onclick="input('1')">1</button></div>
+            <div class="col-3"><button class="btn-calc" onclick="input('2')">2</button></div>
+            <div class="col-3"><button class="btn-calc" onclick="input('3')">3</button></div>
+            <div class="col-3"><button class="btn-calc text-danger" onclick="input('-')">−</button></div>
+
+            <!-- Row 4 -->
+            <div class="col-3"><button class="btn-calc" onclick="input('.')">.</button></div>
+            <div class="col-3"><button class="btn-calc" onclick="input('0')">0</button></div>
+            <div class="col-3">
+                <button class="btn btn-danger w-100 fw-bold" onclick="solve()">=</button>
+            </div>
+            <div class="col-3"><button class="btn-calc text-danger" onclick="input('+')">+</button></div>
+
+            <!-- Clear -->
+            <div class="col-12 mt-2">
+                <button class="btn btn-dark w-100 btn-sm" onclick="clearCalc()">
+                    EFFACER (C)
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
                         <div class="col-md-6 ps-md-4 mt-5 mt-md-0 text-center">
                             <p class="text-center font-syncopate xsmall text-danger mb-4">Calculateur de Remise</p>
@@ -233,6 +244,7 @@
 </body>
 
 </html>
+
 
 
 
