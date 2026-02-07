@@ -113,6 +113,8 @@
                             <p class="text-center font-syncopate xsmall text-danger mb-4">Calculatrice Standard</p>
                             <div id="calcDisplay" class="calc-display">0</div>
                             <div class="row g-2">
+                                <div class="col-3"><button class="btn-calc text-danger" onclick="input('+')">+</button></div>
+                                <div class="col-3"><button class="btn-calc text-danger" onclick="input('-')">-</button></div>
                                 <div class="col-3"><button class="btn-calc" onclick="input('7')">7</button></div>
                                 <div class="col-3"><button class="btn-calc" onclick="input('8')">8</button></div>
                                 <div class="col-3"><button class="btn-calc" onclick="input('9')">9</button></div>
@@ -127,15 +129,14 @@
                                         <div class="col-4"><button class="btn-calc" onclick="input('1')">1</button></div>
                                         <div class="col-4"><button class="btn-calc" onclick="input('2')">2</button></div>
                                         <div class="col-4"><button class="btn-calc" onclick="input('3')">3</button></div>
-                                        <div class="col-3"><button class="btn-calc text-danger" onclick="input('+')">+</button></div>
-<div class="col-3"><button class="btn-calc text-danger" onclick="input('-')">-</button></div>
+                                       
                                         <div class="col-8"><button class="btn-calc" onclick="input('0')">0</button></div>
                                         <div class="col-4"><button class="btn-calc" onclick="input('.')">.</button></div>
                                         
                                         
                                     </div>
                                 </div>
-                                <div class="col-3"><button class="btn btn-danger w-100 h-50 fw-bold" onclick="solve()">=</button></div>
+                                <div class="col-3"><button class="btn btn-danger w-100 h-100 fw-bold" onclick="solve()">=</button></div>
                                 <div class="col-12 mt-2"><button class="btn btn-dark w-100 btn-sm" onclick="clearCalc()">EFFACER (C)</button></div>
                             </div>
                         </div>
@@ -232,5 +233,6 @@
 </body>
 
 </html>
+
 
 
